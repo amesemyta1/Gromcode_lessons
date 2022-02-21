@@ -1,7 +1,7 @@
 [target='_blank'] {
   color: green;
 }
-li {
+ul {
   background-color: yellow;
 }
 header,
@@ -20,6 +20,6 @@ article.new {
 li.new {
   background-color: red;
 }
-.new.posted {
+.new.posted-today {
   background-color: pink;
 }
