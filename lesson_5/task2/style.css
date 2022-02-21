@@ -1,0 +1,12 @@
+[data-description] {
+  font-size: 24px;
+}
+[data-description='anchors'] {
+  background-color: grey;
+}
+[href][target] {
+  color: green;
+}
+[type='text'] {
+  background-color: orange;
+}
