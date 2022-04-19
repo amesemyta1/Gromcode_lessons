@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Operators in attribute selectors</title>
+    <title>Псевдоэлементы</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -13,30 +13,23 @@
   </head>
 
   <body>
-    <h1 class="page-header">Operators in attribute selectors</h1>
+    <h1>Псевдоэлементы</h1>
 
-    <ul>
-      <li>
-        <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
-      </li>
-      <li>
-        <a href="broken link https://microsoft.com" lang="english">Microsoft</a>
-      </li>
-      <li>
-        <a href="https://www.google.com" title="item popular">Google</a>
-      </li>
-      <li>
-        <a href="https://www.opera.com" title="popular item" lang="en-us">Opera</a>
-      </li>
-      <li>
-        <a href="https://www.apple.com" title="link popular">Apple</a>
-      </li>
-      <li>
-        <a href="https://www.wikipedia.org/" title="super-popular">Wikipedia</a>
-      </li>
-      <li title="item">
-        <a target="_blank" href="https://broken.org/">Strange company</a>
-      </li>
-    </ul>
+    <section>
+      <h2>Anchor - используются для ссылок</h2>
+      <a class="anchor" href="#">I am a link</a>
+    </section>
+
+    <section>
+      <h2>Пользовательские действия</h2>
+      <button class="some-button">Hover and click me</button>
+      <button disabled class="some-button">Disabled button</button>
+    </section>
+
+    <section>
+      <h2>Инпуты</h2>
+      <input type="text" class="search" />
+      <input type="checkbox" class="confirm-checkbox" />
+    </section>
   </body>
 </html>
