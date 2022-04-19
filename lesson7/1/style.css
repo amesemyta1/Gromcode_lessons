@@ -19,3 +19,9 @@ a:hover {
     color: white;
     background-color: grey;
 }
+.search:focus {
+    background-color: orange;
+}
+.confirm-checkbox:checked {
+    margin-left: 20px;
+}
