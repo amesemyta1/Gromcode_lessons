@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Иерархические селекторы</title>
+    <title>Selectors Exercise</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -13,73 +13,66 @@
   </head>
 
   <body>
-    <h1 class="page-header">Иерархические селекторы</h1>
+    <h1>Selectors Exercise</h1>
 
-    <section class="already-learned">
-      <h2>В этом курсе мы уже изучили</h2>
-      <ol>
-        <li>
-          <h3>HTML</h3>
-          <ul>
-            <li id="special1">
-              <h4>Семантические теги</h4>
-            </li>
-            <li>
-              <h4>
-                Одинарные и парные теги (<code>&lt;img&gt;</code>,
-                <code>&lt;div&gt;...&lt;/div&gt;</code> ...)
-              </h4>
-            </li>
-            <li>
-              <h4>Атрибуты</h4>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>CSS</h3>
-          <ul>
-            <li>
-              <h4>Несколько способов назначать стили элементам</h4>
-            </li>
-            <li>
-              <h4>Селекторы (<code>#id</code>, <code>.className</code> ...)</h4>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-    <section class="to-be-learned">
-      <h2>А об этом еще предстоит узнать:</h2>
-      <ol>
-        <li>
-          <h3>HTML</h3>
-          <ul>
-            <li>
-              <h4>Работа с формами (<code>&lt;input&gt;</code>, <code>&lt;form&gt;</code> ...)</h4>
-            </li>
-            <li>
-              <h4>Работа с таблицами</h4>
-            </li>
-            <li>
-              <h4>Медиа контент (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code> ...)</h4>
-            </li>
-            <li>...</li>
-          </ul>
-        </li>
-        <li>
-          <h3>CSS</h3>
-          <ul>
-            <li>Layout</li>
-            <li>Работа с фоном и цветами</li>
-            <li>Box model (<code>padding</code>, <code>margin</code> ...)</li>
-            <li id="special2">Стилизация текста</li>
-            <li>Flexbox</li>
-            <li>Резиновая верстка</li>
-            <li>Адаптивная верстка верстка</li>
-            <li>И многое другое</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+    <p>PARAGRAPH NOT INSIDE A DIV</p>
+
+    <div>
+      <p class="hello">I am a paragraph with a class</p>
+      <p id="special">I am a paragraph with an ID</p>
+
+      <h2>I am an awesome h2</h2>
+
+      <p>
+        Tom Sawyer is a boy of about 16 years of age, who resides in the fictional town of St.
+        Petersburg, Missouri, in about the year 1845
+      </p>
+    </div>
+
+    <div>
+      <h2>Things I need to do</h2>
+
+      <ul>
+        <li>Walk Dog <input type="checkbox" checked /></li>
+        <li>Feed Dog <input type="checkbox" checked /></li>
+        <li>Wash Dog <input type="checkbox" /></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>I am another awesome h2</h2>
+
+      <p>
+        Tom Sawyer's best friends include Joe Harper and <em>Huckleberry</em> Finn. In The
+        Adventures of Tom Sawyer, Tom's infatuation with classmate Becky Thatcher is apparent as he
+        tries to intrigue her with his strength, boldness, and handsome looks. He first sees her
+        after he confessed his feelings for Amy Lawrence, one of his classmates
+      </p>
+
+      <p>I'm the second paragraph inside this div!</p>
+    </div>
+
+    <p>PARAGRAPH NOT INSIDE A DIV</p>
+
+    <div>
+      <h2>A less awesome h2</h2>
+
+      <p>
+        He lives with his half-brother Sid, his cousin Mary, and his stern Aunt Polly. There is no
+        mention of Tom's father, as Tom's mother and father are dead. Tom has another aunt, Sally
+        Phelps, who lives very much farther down the Mississippi
+      </p>
+
+      <p>One last paragraph here!</p>
+
+      <a href="https://www.facebook.com">I am a link to facebook</a>
+      <a href="https://www.facebook.com">I am another link to facebook</a>
+      <br />
+
+      <label><input type="text" name="name" /> Name</label><br />
+      <label><input type="password" name="password" /> Password</label><br />
+    </div>
+
+    <p>PARAGRAPH NOT INSIDE A DIV</p>
   </body>
 </html>
