@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Hierarchy selectors</title>
+    <title>Древовидные структуры</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -13,22 +13,22 @@
   </head>
 
   <body>
-    <h1>Hierarchy selectors</h1>
-
-    <ol>
-      <li><span>> - direct children</span></li>
-      <li><span>space - all nested children</span></li>
-      <li><span>~ - all brothers after</span></li>
-      <li><span>+ - next brother</span></li>
-    </ol>
+    <h1>Древовидные структуры</h1>
 
     <ul>
-      <li><span>Europe</span></li>
-      <li><span>Asia</span></li>
-      <li id="special"><span>Africa</span></li>
-      <li><span>Antarctida</span></li>
-      <li><span>South America</span></li>
-      <li><span>North America</span></li>
+      <li><span>1 - :first-child</span></li>
+      <li><span>2 - :last-child</span></li>
+      <li><span>3 - :nth-child()</span></li>
+      <li><span>4 - :nth-last-child()</span></li>
+      <li><span>5 - :nth-of-type()</span></li>
+      <li><span>6 - :last-of-type()</span></li>
     </ul>
+    <div class="paragraphs">
+      <p>Paragraph #1</p>
+      <p>Paragraph #2</p>
+      <div>Div</div>
+      <p>Paragraph #3</p>
+      <p>Paragraph #4</p>
+    </div>
   </body>
 </html>
