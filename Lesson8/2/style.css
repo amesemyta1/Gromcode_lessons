@@ -1,17 +1,14 @@
-li {
-    margin-bottom: 16px;
+* {
+    box-sizing: border-box;
 }
-ul > li:first-child > span {
-    background-color: red;
-    color: white;
-}
-ul > li:last-child > span {
-    background-color: black;
-    color: white;
-}
-ul > li:nth-child(even) > span {
-    margin-left: 16px;
-}
-div.paragraphs > p:nth-of-type(odd) {
-    background-color: grey;
+.rectangle {
+    width: 500px;
+    height: 200px;
+    background-color: bisque;
+    border-width: 10px 20px 10px 20px;
+    border-style: solid solid dashed dashed;
+    border-color: firebrick chartreuse burlywood aqua; 
+    margin: 50px 100px;
+    padding: 20px;
+    font-size: 24px;
 }
