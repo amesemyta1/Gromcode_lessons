@@ -1,20 +1,31 @@
-.theory::first-letter {
-    font-size: 36px;
-    color: orange;
-    margin-left: 16px;
+* {
+    box-sizing: border-box;
 }
-.theory::first-line {
-    font-size: 24px;
+.rectangle {
+    background-color: forestgreen;
+    width: 100px;
+    height: 50px;
+    border-radius: 16px;
+    margin: 50px;
 }
-.theory::selection {
-    background-color: red;
-    color: white;
+.oval {
+    background-color: darkmagenta;
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 50px;
 }
-a::before {
-    content: '>';
-    color: green;
+.circle {
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 50px;
 }
-a::after {
-    content: '<';
-    color: green;
+.triangle {
+    width: 100px;
+    height: 100px;
+    border: 50px solid transparent;
+    border-top-color: brown;
+    margin: 50px;   
 }
