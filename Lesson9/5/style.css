@@ -13,6 +13,8 @@ header {
 nav {
     height: 40px;
     color: white;
+    position: absolute;
+    left: 40px;
 }
 ul {
     line-height: 40px;
