@@ -1,14 +1,18 @@
 * {
     box-sizing: border-box;
 }
-.rectangle {
-    width: 500px;
-    height: 200px;
-    background-color: bisque;
-    border-width: 10px 20px 10px 20px;
-    border-style: solid solid dashed dashed;
-    border-color: firebrick chartreuse burlywood aqua; 
-    margin: 50px 100px;
-    padding: 20px;
-    font-size: 24px;
+.red {
+    background-color: red;
+    float: right;
+}
+.green {
+    background-color: green;
+    float: left;
+}
+.container {
+    float: left;
+    width: 50%;
+}
+.footer {
+    clear: both;
 }
