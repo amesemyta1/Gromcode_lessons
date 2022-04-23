@@ -24,7 +24,7 @@ li {
     margin-left: 16px;
   }
 .nav-item:nth-last-of-type(2) {
-    margin-left: 14px;
+    margin-left: 12px;
 }
 main {
     background-color: beige;
