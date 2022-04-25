@@ -21,7 +21,7 @@
     margin-left: 16px;
 }
 .navigation > li {
-    margin-right: 10px;
+    margin-right: 16px;
 }
 .footer_text {
     margin: auto;
@@ -50,7 +50,7 @@
     display: flex;
     justify-content: center;
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 .news_navigation {
     margin-left: 16px;
