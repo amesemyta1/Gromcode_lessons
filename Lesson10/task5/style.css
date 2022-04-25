@@ -10,8 +10,8 @@ header {
     margin: 8px;
     padding: 16px;
     background-color: bisque;
-    flex-basis: 284px;
-    min-width: 284px;
+    flex-basis: 255px;
+    min-width: 255px;
     flex-grow: 1;
     flex-shrink: 1;
 }
