@@ -1,24 +1,24 @@
-body {
+* {
+    box-sizing: border-box;
+}
+div {
+    display: inline-block;
+    position: relative;
+    margin: 16px;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip {
     display: flex;
-    flex-wrap: wrap;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    border: 4px;
+    padding: 8px;
+    bottom: -40px;
+    border-radius: 5px;
+    visibility: hidden;
 }
-.block {
-    height: 300px;
-    flex-shrink: 1;
-    flex-grow: 1;
-}
-.block_red {
-    background-color: red;
-}
-.block_green {
-    background-color: green;
-}
-.block_blue {
-    background-color: blue;
-}
-.block_yellow {
-    background-color: yellow;
-}
-.block_black {
-    background-color:black;
+.text:hover .tooltip {
+    visibility: visible;
 }
