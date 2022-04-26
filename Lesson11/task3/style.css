@@ -30,7 +30,6 @@
     padding: 16px;
 }
 .dropdown:hover .menu-list {
-    background-color: ghostwhite;
     display: block; 
 }
 .menu-button:hover {
