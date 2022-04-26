@@ -35,3 +35,6 @@
 .menu-button:hover {
     opacity: 1;
 }
+.menu-item:hover {
+    background-color: ghostwhite;
+}
