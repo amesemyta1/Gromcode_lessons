@@ -16,7 +16,7 @@ div {
     border: 4px;
     padding: 8px;
     bottom: -40px;
-    border-radius: 5px;
+    border-radius: 4px;
     visibility: hidden;
 }
 .text:hover .tooltip {
