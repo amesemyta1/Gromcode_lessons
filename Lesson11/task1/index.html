@@ -10,35 +10,20 @@
       crossorigin="anonymous"
     />
     <style>
-      html {
-        font-size: 24px;
-      }
-
-      div {
-        margin: 16px;
-        border: 1px solid burlywood;
-      }
-
-      .horizontal > span {
-        background-color: aqua;
-      }
-      .vertical > span {
-        background-color: coral;
+      div > div {
+        width: 100px;
+        height: 100px;
+        background: coral;
       }
     </style>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <div class="horizontal">
-      <span>Span1</span>
-      <span>Span2</span>
-      <span>Span3</span>
-    </div>
-    <div class="vertical">
-      <span>Span1</span>
-      <span>Span2</span>
-      <span>Span3</span>
+    <div class="container">
+      <div>Not Displayed</div>
+      <div>Hiddnen</div>
+      <div>Visible</div>
     </div>
   </body>
 </html>
