@@ -1,19 +1,8 @@
-* {
-    box-sizing: border-box;
-}
-header {
+.gallery {
     display: flex;
-    justify-content: center;
+    overflow: auto;
+    cursor: all-scroll;
 }
-.articles-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-.article {
+.thumb {
     margin: 8px;
-    padding: 16px;
-    background-color: bisque;
-    flex-basis: 287px;
-    flex-grow: 1;
-    flex-shrink: 1;
 }
