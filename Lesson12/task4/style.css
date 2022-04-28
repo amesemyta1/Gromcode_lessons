@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+div {
+    display: inline-block;
+    position: relative;
+    margin: 16px;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip {
+    display: flex;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    border: 4px;
+    padding: 8px;
+    bottom: -40px;
+    border-radius: 4px;
+    visibility: hidden;
+}
+.text:hover .tooltip {
+    visibility: visible;
+}
