@@ -1,13 +1,12 @@
-.list {
-    list-style-type: none;
-    font-size: 1.5em;
-}
-.first {
-    text-decoration: red overline;
-}
-.second {
-    text-decoration: line-through;
-}
-.third {
-    text-decoration: green underline;
+.header-text {
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+    font-size: 96px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, yellow, red);
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
