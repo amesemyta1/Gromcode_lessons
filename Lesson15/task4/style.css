@@ -23,7 +23,7 @@
     opacity: 0.5;
     cursor: pointer;
     text-align: center;
-    padding: 1.3em;
+    padding-top: 16px;
 }
 .image-button:hover {
     opacity: 1;
