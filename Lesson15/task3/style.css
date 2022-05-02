@@ -1,13 +1,6 @@
-.list {
-    list-style-type: none;
-    font-size: 1.5em;
-}
-.first {
-    text-decoration: red overline;
-}
-.second {
-    text-decoration: line-through;
-}
-.third {
-    text-decoration: green underline;
+iframe {
+    display: block;
+    margin: 100px auto;
+    width: 500px;
+    height: 400px;
 }
