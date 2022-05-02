@@ -11,6 +11,7 @@
     max-width: 100%;
 }
 .image-button {
+    margin-top: -2px;
     position: absolute;
     top: calc(50% - 25px);
     left: calc(50% - 100px);
