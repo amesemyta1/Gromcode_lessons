@@ -2,10 +2,12 @@
     box-sizing: border-box;
 }
 .image-container {
+    display: flex;
     position: absolute;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0);
+    min-width: 0%;
 }
 .image {
     max-width: 100%;
