@@ -1,21 +1,8 @@
-html {
-    font-family: Verdana;
-}
-
-h1 {
-    font-size: 74px;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 50vw;
-    margin: auto;
-}
-div {
-    background-color: coral;
-    height: 200px;
-    text-align: center;
-    line-height: 200px;
-    color: white;
-    text-transform: uppercase;
+.main-video {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 200px;
+    display: block;
 }
