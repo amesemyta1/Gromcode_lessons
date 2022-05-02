@@ -12,7 +12,7 @@
 }
 .image-button {
     position: absolute;
-    top: calc(50% - 24px);
+    top: calc(50% - 25px);
     left: calc(50% - 100px);
     width: 200px;
     height: 50px;
@@ -23,7 +23,7 @@
     opacity: 0.5;
     cursor: pointer;
     text-align: center;
-    padding-top: 16px;
+    padding-top: 18px;
 }
 .image-button:hover {
     opacity: 1;
