@@ -40,6 +40,8 @@ body {
     margin-bottom: 4px;
 }
 .form-control {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 8px;
 }
 .submit-button {
