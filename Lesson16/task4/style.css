@@ -37,7 +37,7 @@ body {
 }
 .form-label {
     display: flex;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 .form-control {
     margin-bottom: 8px;
