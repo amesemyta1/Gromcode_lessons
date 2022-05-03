@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>One more gallery</title>
+    <title>Forms</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
@@ -11,26 +11,32 @@
     />
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    <div class="gallery">
-      <div
-        class="image"
-        style="
-          background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature1.jpeg);
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature2.jpeg);
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature3.jpeg);
-        "
-      ></div>
-    </div>
+    <main class="page">
+      <form class="login-form">
+        <h1 class="form-title">Login</h1>
+        <div class="form-control">
+          <label class="form-label" for="email">Email</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="mail@example.com"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label class="form-label" for="userName">Full Name</label>
+          <input class="form-input" type="text" id="userName" name="userName" />
+        </div>
+        <div class="form-control">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-input" type="password" id="password" name="password" required />
+        </div>
+        <button class="submit-button" type="submit">Submit</button>
+      </form>
+    </main>
   </body>
 </html>
