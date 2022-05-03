@@ -19,7 +19,6 @@ input[type="checkbox"] {
     padding-left: 35px;
     font-size: 24px;
     margin: 16px;
-    top: 15px;
 }
 
 .checkbox input:checked + .checkmark {
