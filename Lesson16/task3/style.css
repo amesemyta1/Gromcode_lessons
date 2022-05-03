@@ -1,12 +1,29 @@
-.header-text {
-    text-align: center;
-    margin: 0;
-    padding: 16px;
-    font-size: 96px;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(45deg, yellow, red);
-    font-weight: 700;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+body {
+    margin: 16px;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    width: 25px;
+    height: 25px;
+    background-color: #d3d3d3;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 35px;
+    font-size: 24px;
+}
+
+.checkbox input:checked + .checkmark {
+    background-color: #006400;
 }
