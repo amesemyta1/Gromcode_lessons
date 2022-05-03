@@ -5,16 +5,16 @@ html {
     font-family: monospace;
     font-size: 16px;
 }
-body {
+.page {
     background-color: bisque;
+    height: 100vh;
 }
 .login-form {
     background-color: aqua;
     display: flex;
-    position: fixed; 
+    margin: 0 auto;
     top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, 50%);
     width: 300px;
     flex-direction: column;
     padding: 16px;
