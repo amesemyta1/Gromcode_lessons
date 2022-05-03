@@ -31,15 +31,16 @@ body {
     padding: 4px;
     outline: none; 
     width: 100%;
-    display: block;
-    margin-bottom: 8px;
 }
 .form-input:invalid {
     border: 3px solid #ff0000;
 }
 .form-label {
-    display: block;
+    display: flex;
     margin-bottom: 4px;
+}
+.form-control {
+    margin-bottom: 8px;
 }
 .submit-button {
     width: 100%;
