@@ -2,15 +2,13 @@
     box-sizing: border-box;
 }
 .image-container {
+    position: relative;
     display: flex;
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 0);
-    min-width: 0%;
+    justify-content: center;
 }
 .image {
     max-width: 100%;
+    height: auto;
 }
 .image-button {
     position: absolute;
@@ -25,7 +23,7 @@
     opacity: 0.5;
     cursor: pointer;
     text-align: center;
-    padding-top: 18px;
+    line-height: 50px;
 }
 .image-button:hover {
     opacity: 1;
