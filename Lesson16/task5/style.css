@@ -1,7 +1,10 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw2/background.jpg);
+* {
+    box-sizing: border-box;
+}
+.big-form {
+    margin: 32px;
+}
+
+.form-input {
+    margin: 8px;
 }
