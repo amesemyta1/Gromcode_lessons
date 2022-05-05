@@ -18,7 +18,6 @@ table, td, th{
 }
 
 td, th {
-  padding: 4px;
   text-align: right;
   line-height: 40px;
 }
