@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin: 16px;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: black;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: black;
+}
+
+table tr:nth-child(1) td:nth-child(1),
+table tr:nth-child(3) td:nth-child(1),
+table tr:nth-child(5) td:nth-child(1),
+table tr:nth-child(7) td:nth-child(1),
+table tr:nth-child(9) td:nth-child(1),
+table tr:nth-child(2) td:nth-child(1),
+table tr:nth-child(4) td:nth-child(1),
+table tr:nth-child(6) td:nth-child(1),
+table tr:nth-child(8) td:nth-child(1),
+table tr:nth-child(10) td:nth-child(1){
+    border: none;
+    background-color: white;
+}
+
+table tr:nth-child(1) td:nth-child(2),
+table tr:nth-child(1) td:nth-child(3),
+table tr:nth-child(1) td:nth-child(4),
+table tr:nth-child(1) td:nth-child(5),
+table tr:nth-child(1) td:nth-child(6),
+table tr:nth-child(1) td:nth-child(7),
+table tr:nth-child(1) td:nth-child(8),
+table tr:nth-child(1) td:nth-child(9),
+table tr:nth-child(1) td:nth-child(10){
+    border: none;
+    background-color: white;
+}
+
+table tr:nth-child(10) td:nth-child(2),
+table tr:nth-child(10) td:nth-child(3),
+table tr:nth-child(10) td:nth-child(4),
+table tr:nth-child(10) td:nth-child(5),
+table tr:nth-child(10) td:nth-child(6),
+table tr:nth-child(10) td:nth-child(7),
+table tr:nth-child(10) td:nth-child(8),
+table tr:nth-child(10) td:nth-child(9),
+table tr:nth-child(10) td:nth-child(10){
+    border: none;
+    background-color: white;
+}
+
+table tr:nth-child(1) td:nth-child(10),
+table tr:nth-child(3) td:nth-child(10),
+table tr:nth-child(5) td:nth-child(10),
+table tr:nth-child(7) td:nth-child(10),
+table tr:nth-child(9) td:nth-child(10),
+table tr:nth-child(2) td:nth-child(10),
+table tr:nth-child(4) td:nth-child(10),
+table tr:nth-child(6) td:nth-child(10),
+table tr:nth-child(8) td:nth-child(10),
+table tr:nth-child(10) td:nth-child(10){
+    border: none;
+    background-color: white;
+}
