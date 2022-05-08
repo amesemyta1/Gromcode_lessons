@@ -1,23 +1,50 @@
-body {
-  display: flex;
-  justify-content: space-around;
+* {
+  box-sizing: border-box;
 }
-.fa-solid {
-  justify-content: space-around;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
-.fa-battery-full {
+.spinner {
+  margin: auto;
+}
+
+.spinner-text {
+  font-family: monospace;
   font-size: 16px;
+  text-transform: uppercase;
+  animation: blinking infinite 2s linear;
 }
-.fa-battery-three-quarters {
-  font-size: 32px;
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border: 4px lightgrey solid;
+  border-top: 4px black solid;
+  border-radius: 45px;
+  margin-bottom: 8px;
+  animation: spin infinite 2s linear;
 }
-.fa-battery-half {
-  font-size: 64px;
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-.fa-battery-quarter {
-  font-size: 128px;
-}
-.fa-battery-empty {
-  font-size: 256px;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
