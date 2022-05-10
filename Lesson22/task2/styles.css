@@ -31,13 +31,12 @@ span {
 @media screen and (min-width: 600px) {
   .products {
     display: flex;
-    flex: 2 0 auto;
+    flex: 1.5 0 auto;
   }
 }
 
 @media screen and (min-width: 900px) {
   .content {
     display: flex;
-    flex: 3 0 auto;
   }
 }
