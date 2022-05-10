@@ -35,6 +35,7 @@ httml {
 }
 
 .navigation {
+  display: flex;
   width: 20%;
   padding: 0.5em;
 }
