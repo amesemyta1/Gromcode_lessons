@@ -1,81 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Background</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <form class="big-form">
-      <div class="form-input">
-        <input type="text" name="primaryLanguage" value="HTML" disabled>
-      </div>
-      <div class="form-input">
-        <input type="checkbox" name="agree">
-      </div>
-      <div class="form-input">
-        <input type="checkbox" name="like" checked readonly>
-      </div>
-      <div class="form-input">
-        <input type="color" name="favouriteColor" value="#ff7f50">
-      </div>
-      <div class="form-input">
-        <input type="date" name="birthDate" value="2021-01-02">
-      </div>
-      <div class="form-input">
-        <input type="datetime-local" name="birthTime" value="2024-10-04T13:02">
-      </div>
-      <div class="form-input">
-        <input type="email" name="email" placeholder="example@domain.com" required>
-      </div>
-      <div class="form-input">
-        <input type="file" name="avatar">
-      </div>
-      <div class="form-input"><input type="month" name="startLearning" value="2020-01"></div>
-      <div class="form-input"><input type="number" name="favouriteNumer" value="17"></div>
-      <div class="form-input">
-        <textarea name="story" id="" cols="30" rows="5"
-        placeholder="A long time ago..."></textarea>
-      </div>
-      <div class="form-input">
-        <input type="password" name="password" value="secret">
-      </div>
-      <div class="form-input languages">
-        <input type="radio" name="language" value="html"> HTML
-        <input type="radio" name="language" value="css" checked> CSS
-        <input type="radio" name="language" value="javascript"> JavaScript
-      </div>
-      <div class="form-input">
-        <input type="range" name="learningProgress" value="30">
-      </div>
-      <div class="form-input">
-        <select name="framework">
-          <option value="react">React</option>
-          <option value="jquery" selected>jQuery</option>
-          <option value="bootstrap">Bootstrap</option>
-        </select>
-      </div>
-      <div class="form-input">
-        <input type="search" name="search" placeholder="Type first letters...">
-      </div>
-      <div class="form-input">
-        <input type="time" name="lunchEnd" value="14:01">
-      </div>
-      <div class="form-input">
-        <input type="url" name="website" placeholder="https://website.com" required>
-      </div>
-      <div class="form-input">
-        <input type="week" name="birthWeek" value="2021-W51">
-      </div>
-      <div class="form-input">
-        <button type="submit">Save</button>
-      </div>
-    </form>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>Responsive website</h1>
+  </header>
+  <main class="main">
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-list-item"><a class="nav-list-link" href="#">Responsive images</a></li>
+        <li class="nav-list-item"><a class="nav-list-link" href="#">Mediaqueries</a></li>
+        <li class="nav-list-item"><a class="nav-list-link" href="#">Flexbox</a></li>
+      </ul>
+    </nav>
+    <section class="section">
+      <h2 class="section__header">True story</h2>
+      <picture>
+        <source srcset="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson22/hw2/big.png" media="(min-width: 600px)">
+        <source srcset="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson22/hw2/small.png">
+        <img src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson22/hw2/big.png" alt="Tree">
+      </picture>
+      <p>There are few ways to define <code>font-size</code>:</p>
+      <ul class="units-list">
+        <li>
+          <span class="css-units">px</span> are good if you need strict definition for a size of text. In other cases it
+          is better to use relative units listed below.
+        </li>
+        <li><span class="css-units">em</span> based on current font size</li>
+        <li><span class="css-units">rem</span> based on <code>&lt;html&gt;</code> font-size</li>
+        <li><span class="css-units">%</span> based on parent font size</li>
+        <li><span class="css-units">vh</span> (viewport height) based on screen height</li>
+        <li><span class="css-units">vw</span> (viewport width) based on screen width</li>
+      </ul>
+    </section>
+    <aside class="news">
+      <h2>Not a news</h2>
+      <p>A web page should look good on any device!</p>
+    </aside>
+  </main>
+  <footer class="footer">Welcome to the responsive world!</footer>
+</body>
+
 </html>
