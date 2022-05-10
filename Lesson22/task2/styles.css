@@ -1,3 +1,43 @@
-.form-control {
-    margin: 16px;
+.navigation {
+  display: flex;
+  background-color: #ff7f50;
+  min-height: 200px;
+  flex: 1 0 auto;
+}
+
+.products-list {
+  display: flex;
+  background-color: #006400;
+  min-height: 200px;
+  flex: 1 0 auto;
+}
+
+.news {
+  display: flex;
+  background-color: #0ff;
+  min-height: 200px;
+  flex: 1 0 auto;
+}
+
+span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: beige;
+  padding: 8px;
+  border-radius: 4px;
+  text-transform: lowercase;
+  margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .products {
+    display: flex;
+    flex: 2 0 auto;
   }
+}
+
+@media screen and (min-width: 900px) {
+  .content {
+    display: flex;
+    flex: 3 0 auto;
+  }
+}
