@@ -1,3 +1,5 @@
+@import "breakpoints.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -14,19 +16,16 @@
   height: 100px;
   margin: 8px;
   background-color: coral;
-}
-@media screen and (min-width: 600px) {
-  .square {
+
+  @include for-medium-up {
     background-color: #8a2be2;
   }
-}
-@media screen and (min-width: 900px) {
-  .square {
+
+  @include for-large-up {
     background-color: #a61;
   }
-}
-@media screen and (min-width: 1200px) {
-  .square {
+
+  @include for-big-up {
     background-color: #c47;
   }
 }
@@ -36,5 +35,3 @@
     flex-direction: column;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
