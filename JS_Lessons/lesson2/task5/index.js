@@ -1,70 +1,35 @@
 /* eslint-disable */
 
-// Унарный плюс приводит операнд к числу
-+17;
-+"77";
+if (true) console.log("I'm in");
 
-console.log("+17:", +17);
-console.log("+'77':", +"77");
+if (false) {
+  console.log("I'm not in");
+}
 
-// Бинарный плюс складывает строки или прибавляет числа
-10 + "5";
-"some" + "text";
+if ("text") {
+  console.log("Yes");
+}
 
-console.log("10 + '5':", 10 + "5");
-console.log("'some' + 'text':", "some" + "text");
+if (null) {
+  console.log("Yes");
+} else {
+  console.log("Else");
+}
 
-// Математические операции с undefined возвращают NaN
-undefined + 1;
-null + 8;
-undefined + "5";
-7 - null;
-5 - undefined;
-"text" + null;
+let age = 23;
 
-console.log("undefined + 1:", undefined + 1);
-console.log("null + 8:", null + 8);
-console.log("undefined + '5'", undefined + "5");
-console.log("7 - null:", 7 - null);
-console.log("5 - undefined:", 5 - undefined);
-console.log("'text' + null:", "text" + null);
+if (age < 16) {
+  console.log("Too young");
+} else if (age >= 16 && age < 18) {
+  console.log("Almost ready");
+} else if (age >= 18 && age < 65) {
+  console.log("Ready");
+} else {
+  console.log("Else");
+}
 
-// Постфиксная и префиксная форма записи
-let num = 17;
-++num;
-num++;
+// Тернаный оператор ? : ( const result = условие ? значение1 : значение2; )
 
-console.log("num:", num);
-console.log("++num:", ++num);
-console.log("num++:", num++);
+let amount = 16;
 
-// математические операторы приводят операнды к числам
-const a = 17;
-const b = -a;
-"24" / 4;
-18 * "3";
-"9" - "3";
-"seventeen" / 3;
-4 * "four";
-17 / 0;
-
-console.log("a:", a);
-console.log("b:", b);
-console.log("'24' / 4:", "24" / 4);
-console.log("18 * '3':", 18 * "3");
-console.log("'9' - '3':", "9" - "3");
-console.log("'seventeen' / 3:", "seventeen" / 3);
-console.log("4 * 'four':", 4 * "four");
-console.log("17 / 0:", 17 / 0);
-
-10 + "seven";
-undefined + 1;
-null + 8;
-undefined + "5";
-"text" + null;
-
-console.log("10 + 'seven':", 10 + "seven");
-console.log("undefined + 1:", undefined + 1);
-console.log("null + 8:", null + 8);
-console.log("undefined + '5':", undefined + "5");
-console.log("'text' + null:", "text" + null);
+const result = amount > 17 ? "full" : "empty";
