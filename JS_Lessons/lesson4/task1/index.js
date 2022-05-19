@@ -1,32 +1,11 @@
-const start = 10;
-const end = 25;
-let result = 0;
+function getSum(start, end) {
+  let sum = 0;
 
-for (let i = start; i <= end; i++) {
-  if (i % 5 === 0) {
-    console.log(i);
-    continue;
+  for (let i = start; i <= end; i += 1) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
   }
 
-  if (i % 2 === 0 && i % 4 !== 0) {
-    result += i;
-    continue;
-  }
-
-  if (i % 3 === 0) {
-    result -= i;
-    continue;
-  }
-
-  if (i % 4 === 0) {
-    result *= i;
-    continue;
-  }
-
-  if (i % 5 === 0) {
-    console.log(i);
-    continue;
-  }
+  return sum;
 }
-
-console.log(result);
