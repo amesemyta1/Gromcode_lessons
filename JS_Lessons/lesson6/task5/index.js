@@ -1,19 +1,23 @@
-/**
- * @param {number} num
- * @return {undefined}
- */
-function getPrimes(num) {
-  let isPrime = 0;
-  for (let i = 2; i <= num; i += 1) {
-    isPrime = 1;
-    for (let j = 2; j < i; j += 1) {
-      if (i % j === 0) {
-        isPrime = 0;
-        break;
-      }
-    }
-    if (isPrime === 1) console.log(i);
+function checker(arr) {
+  if (!Array.isArray(arr)) {
+    return null;
   }
-}
 
-console.log(getPrimes(19));
+  let min = arr[0];
+  let max = arr[0];
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  sum = max + min;
+  if (sum > 100) {
+    return true;
+  }
+  return false;
+}
