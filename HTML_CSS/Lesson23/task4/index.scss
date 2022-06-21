@@ -1,14 +1,5 @@
-@media screen and (min-width: 600px) {
-  .products {
-    display: flex;
-    flex: 2 0;
-  }
-}
-@media screen and (min-width: 900px) {
-  .content {
-    display: flex;
-  }
-}
+@import 'layout.scss';
+
 .navigation {
   display: flex;
   background-color: #ff7f50;
@@ -38,5 +29,3 @@ span {
   text-transform: lowercase;
   margin: auto;
 }
-
-/*# sourceMappingURL=style.css.map */
