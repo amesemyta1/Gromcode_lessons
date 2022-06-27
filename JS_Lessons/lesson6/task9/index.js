@@ -18,6 +18,6 @@ function withdraw(clients, balances, client, amount) {
   return money;
 }
 
-withdraw(["Ann", "John", "User"], [1400, 87, -6], "John", 50);
+withdraw(['Ann', 'John', 'User'], [1400, 87, -6], 'John', 50);
 
-withdraw(["Ann", "John", "User"], [1400, 87, -6], "User", 10);
+withdraw(['Ann', 'John', 'User'], [1400, 87, -6], 'User', 10);
