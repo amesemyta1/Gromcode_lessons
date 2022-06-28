@@ -1,6 +1,7 @@
-const getTotalRevenue = transactions => {
-    console.log(transactions.map(el => el.amount).reduce((el1, el2) => el1 + el2));
-  };
+const getTotalRevenue = transactions => transactions
+    .map(el => el.amount)
+    .reduce((el1, el2) => el1 + el2);
+
   
   // examples
   const dayTransactions = [
