@@ -1,22 +1,14 @@
-/* eslint-disable no-restricted-syntax */
-
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- * */
-
-const getAdults = obj => {
-    let result = {};
-
-    for(let key in obj){
-        if (obj[key] >= 18) {
-            result[key] = obj[key];
-        }
-    };
-          
-    return result;
-};
+const getTotalRevenue = transactions => {
+    console.log(transactions.map(el => el.amount).reduce((el1, el2) => el1 + el2));
+  };
   
   // examples
-  getAdults({ 'John Doe': 19, Tom: 17, Bob: 18 }); // ==> { 'John Doe': 19, Bob: 18 }
-  getAdults({ Ann: 56, Andrey: 7 }); // ==> { Ann: 56 }
+  const dayTransactions = [
+    { userId: 22, amount: 60, operation: 'sell' },
+    { userId: 22, amount: 160, operation: 'buy' },
+    { userId: 44, amount: 90, operation: 'sell' },
+  ];
+  
+  const result = getTotalRevenue(dayTransactions); // ==> 310
+//   getTotalRevenue(dayTransactions);
+//   console.log(result);

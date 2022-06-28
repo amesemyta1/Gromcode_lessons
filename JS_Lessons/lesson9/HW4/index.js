@@ -1,23 +1,24 @@
-/* eslint-disable no-restricted-syntax */
-
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- * */
-
-const pickProps = (obj, props) => {
-let result = {};
-
-props.forEach(element => {
-    for(let key in obj){
-        if (element === key) {
-            result[key] = obj[key];
-        }
-    }
-});
-      
-return result;
-};
+const getPeople = obj => Object.entries(obj)
+    .map(room => room[1])
+    .map(people => Object.values(people))
+    .flat()
+    .map(name => Object.values(name))
+    .flat();
   // examples
-  pickProps({ a: 1, b: 2, c: 3 }, ['a', 'c']); // ==> { a: 1, c: 3 }
-  pickProps({ a: 1, b: 2, c: 3 }, ['a', 'c', 'd', 'hex']); // ==> { a: 1, c: 3 }
+  rooms = {
+    room1: [
+        { name: 'Jack' },
+        { name: 'Andrey' },
+        { name: 'Ann' },
+        { name: 'Vasyl' },
+    ],
+    room2: [
+        { name: 'Dan' },
+    ],
+    room3: [
+        { name: 'Denis' },
+        { name: 'Max' },
+        { name: 'Alex' },
+    ],
+};
+console.log(getPeople(rooms));
