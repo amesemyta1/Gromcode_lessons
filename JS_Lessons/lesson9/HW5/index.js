@@ -10,5 +10,3 @@ const getTotalRevenue = transactions => {
   ];
   
   const result = getTotalRevenue(dayTransactions); // ==> 310
-//   getTotalRevenue(dayTransactions);
-//   console.log(result);
