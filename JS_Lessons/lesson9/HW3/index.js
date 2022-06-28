@@ -1,37 +1,42 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
+/* eslint-disable prefer-object-spread */
 
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
+/* В решения этой задачи используется метод Object.assign. В реальных проектах для такой задачи
+ * лучше использовать spread опертор - это самый современный подход
+ *
+ * Задачу мы делаем для практики и демонстрационных целей, поэтому чтобы eslint не ругался на эту ошибку,
+ * для этой задачи он отключен аннотацией eslint-disable
  * */
 
-const user = {
+function mergeObjectsV1(obj1, obj2) {
+    return Object.assign(obj1, obj2);
+}
+  
+function mergeObjectsV2(obj1, obj2) {
+    return Object.assign(obj2, obj1);
+}
+  
+function mergeObjectsV3(obj1, obj2) {
+    const result = { ...obj1, ...obj2};
+    return result;
+}
+  
+function mergeObjectsV4(obj1, obj2) {
+    const result = { ...obj2, ...obj1};
+    return result;
+}
+  
+  // examples
+  const obj1 = {
     name: 'Tom',
     age: 17,
   };
   
-  /* присвой объекту свойство hobby со значением 'football' с помощью точки */
-  user.hobby = 'football';
-
-  const anotherKey = 'married';
-  /* название свойства хранится в переменной anotherKey. Присвой объекту такое свойство со значением false */
-  user.married = false;
-  /* присвой объекту свойство 'favorite music' со значением 'rock' */
-  user['favorite music'] = 'rock';
-  /* присвой объекту свойство 'address', которое будет пустым объкетом */
-  user.address = {};
-  /* присвой объекту в 'address' свойство 'country', со значением 'Ukraine' */
-  user.address.country = 'Ukraine';
-  /* присвой объекту в 'address' свойство 'building', со значением 17 */
-  user.address.building = 17;
-  /* выведи в консоль итоговый объект user */
-  console.log(user);
-
-function getKeys(obj) {
-    for(let key in obj) {
-        arr.push(key);
-    }
-  }
-
-  getKeys(user);
+  const obj2 = {
+    name: 'Bob',
+    student: false,
+  };
+  
+  mergeObjectsV1(obj1, obj2); // ==> { name: 'Bob', age: 17, student: false }
+  mergeObjectsV2(obj1, obj2); // ==> { name: 'Tom', age: 17, student: false }
+  mergeObjectsV3(obj1, obj2); // ==> { name: 'Bob', age: 17, student: false }
+  mergeObjectsV4(obj1, obj2); // ==> { name: 'Tom', age: 17, student: false }
