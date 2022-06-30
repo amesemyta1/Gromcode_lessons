@@ -6,4 +6,4 @@
  * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
  * */
 
-const copyObj = obj => Object.assign({}, obj);
+const copyObj = obj => ({ ...obj });
