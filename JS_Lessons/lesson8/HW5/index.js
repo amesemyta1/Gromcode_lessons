@@ -6,17 +6,17 @@
  * */
 
 const getAdults = obj => {
-    let result = {};
+  const result = {};
 
-    for(let key in obj){
-        if (obj[key] >= 18) {
-            result[key] = obj[key];
-        }
-    };
-          
-    return result;
+  for (const key in obj) {
+    if (obj[key] >= 18) {
+      result[key] = obj[key];
+    }
+  }
+
+  return result;
 };
-  
-  // examples
-  getAdults({ 'John Doe': 19, Tom: 17, Bob: 18 }); // ==> { 'John Doe': 19, Bob: 18 }
-  getAdults({ Ann: 56, Andrey: 7 }); // ==> { Ann: 56 }
+
+// examples
+getAdults({ 'John Doe': 19, Tom: 17, Bob: 18 }); // ==> { 'John Doe': 19, Bob: 18 }
+getAdults({ Ann: 56, Andrey: 7 }); // ==> { Ann: 56 }

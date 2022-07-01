@@ -5,3 +5,5 @@ const reverseArray = numbers => {
 
   return numbers.slice().reverse();
 };
+
+console.log(reverseArray([]));
