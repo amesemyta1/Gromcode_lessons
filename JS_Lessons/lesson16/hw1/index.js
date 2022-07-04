@@ -1,15 +1,14 @@
-/* eslint-disable */
+const createArrayOfFunctions = (len = 0) => {
+  const result = [...new Array(len)];
 
-/* Начальный код для этой задачи написан с плохими практиками, такими как использования var, 
-переопределение переменной и тд. Это сделано намерено чтобы разобрать работу var.
-Чтобы eslint не ругался на ошибки, для этой он отключен аннотацией eslint-disable */
+  result.forEach((el, index) => {
+    result[index] = function indexOfArray() {
+      return index;
+    };
+  });
 
-let a = 17;
+  return result;
+};
 
-if (a) {
-  let a = 1;
-
-  console.log(a);
-}
-
-console.log(a);
+console.log(createArrayOfFunctions());
+console.log(createArrayOfFunctions(9)[5]()); // 5
