@@ -1,5 +1,6 @@
 function defer(func, ms) {
   return function () {
+    // eslint-disable-next-line prefer-rest-params
     setTimeout(() => func.apply(this, arguments), ms);
   };
 }

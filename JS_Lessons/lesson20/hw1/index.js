@@ -1,35 +1,39 @@
-function saveFuncCalls(func) {
-  const callsHistory = [];
+/**
+ * @field {string} id
+ * @field {number} price
+ * @field {date} dateCreated
+ * @field {boolean} isConfirmed
+ * @field {date} dateConfirmed
+ * @field {string} city
+ * @field {string} type
+ */
 
-  return function history(...args) {
-    callsHistory.push(args);
-    console.log(history.callsHistory);
-    history.callsHistory = callsHistory;
-    return func.call(this, ...args);
-  };
+class Order {
+  constructor(price, city, type) {
+    this.price = price;
+    this.city = city;
+    this.type = type;
+    this.id = '';
+    this.isConfirmed = false;
+    this.dateCreated = new Date();
+  }
+
+  checkPrice() {
+    if (this.price > 1000) {
+      return true;
+    }
+    return false;
+  }
+
+  confirmOrder() {
+    this.isConfirmed = true;
+    this.dateConfirmed = new Date();
+  }
+
+  isValidType() {
+    if (this.type === 'Buy' || this.type === 'Sell') {
+      return true;
+    }
+    return false;
+  }
 }
-
-// test without context
-
-function getSum(firstNum, secondNum) {
-  return firstNum + secondNum;
-}
-
-const sumWithMemory = saveFuncCalls(getSum);
-console.log(sumWithMemory(4, 2));
-console.log(sumWithMemory(9, 1));
-console.log(sumWithMemory.callsHistory);
-
-// text with context
-
-const user = {
-  id: 11,
-  getId() {
-    return this.id;
-  },
-};
-
-const idWithMemory = saveFuncCalls(user.getId);
-console.log(idWithMemory());
-console.log(idWithMemory.apply({ id: 1000 }));
-console.log(idWithMemory.callsHistory);

@@ -1,4 +1,4 @@
-// eslint-disable-next-line max-classes-per-file
+/* eslint-disable max-classes-per-file */
 class Vehicle {
   constructor(name, numberOfWheels) {
     this.numberOfWheels = numberOfWheels;
@@ -30,7 +30,3 @@ class Ship extends Vehicle {
     console.log(`${this.name} lifting anchor down`);
   }
 }
-
-const ship1 = new Ship('Aurora', 15);
-
-console.log(ship1);
