@@ -13,5 +13,3 @@ const event = {
       }));
   },
 };
-
-console.log(event.getInvitations());
