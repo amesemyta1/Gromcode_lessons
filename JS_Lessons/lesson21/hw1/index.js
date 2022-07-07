@@ -9,6 +9,3 @@ export function getInputElement() {
   console.dir(inputElem);
   return inputElem;
 }
-
-getTitleElement();
-getInputElement();
