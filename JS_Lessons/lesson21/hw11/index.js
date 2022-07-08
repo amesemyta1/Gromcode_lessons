@@ -1,6 +1,8 @@
 export function squaredNumbers() {
-  const element = document.querySelector('.number');
-  const squareElement = element.dataset.number * element.dataset.number;
-  console.log(squareElement);
-  element.dataset.squaredNumber = squareElement;
+  const element = document.querySelectorAll('.number');
+  for (let i = 0; i < element.length; i += 1) {
+    const numberElement = element[i].dataset.number;
+    const squaredElement = numberElement * numberElement;
+    element[i].dataset.squaredNumber = squaredElement;
+  }
 }
