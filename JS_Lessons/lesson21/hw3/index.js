@@ -1,32 +1,23 @@
-/* eslint-disable max-classes-per-file */
-class Vehicle {
-  constructor(name, numberOfWheels) {
-    this.numberOfWheels = numberOfWheels;
-    this.name = name;
-  }
-
-  move() {
-    console.log(`${this.name} is moving`);
-  }
-
-  stop() {
-    console.log(`${this.name} stopped`);
-  }
+export function getTitle() {
+  const text = document.querySelector('.title');
+  console.log(text.textContent);
+  return text.textContent;
 }
 
-class Ship extends Vehicle {
-  constructor(name, numberOfWheels, maxSpeed) {
-    super(name, numberOfWheels);
-    this.maxSpeed = maxSpeed;
-  }
+export function getDescription() {
+  const text = document.querySelector('.about');
+  console.log(text.innerText);
+  return text.innerText;
+}
 
-  move() {
-    console.log(`${this.name} lifting anchor up`);
-    super.move();
-  }
+export function getPlans() {
+  const text = document.querySelector('.plans');
+  console.log(text.innerHTML);
+  return text.innerHTML;
+}
 
-  stop() {
-    super.stop();
-    console.log(`${this.name} lifting anchor down`);
-  }
+export function getGoal() {
+  const text = document.querySelector('.goal');
+  console.log(text.outerHTML);
+  return text.outerHTML;
 }
