@@ -1,4 +1,4 @@
-export function setTitle(text) {
-  const title = document.querySelector('.title');
-  title.textContent = text;
+export function clearList() {
+  const item = document.querySelector('.categories');
+  item.innerHTML = '';
 }
