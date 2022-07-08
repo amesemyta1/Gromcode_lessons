@@ -14,5 +14,3 @@ export function finishList() {
   element6.textContent = '6';
   special.after(element6);
 }
-
-finishList();
