@@ -1,10 +1,10 @@
-export function finishForm() {
-  const loginForm = document.querySelector('.login-form');
-  const paswInput = document.querySelector('input');
-  const input = document.createElement('input');
+const checkboxElem = document.querySelectorAll('.pagination__page');
 
-  input.setAttribute('type', 'text');
-  input.setAttribute('name', 'login', 'type', 'text');
-  loginForm.prepend(input);
-  paswInput.setAttribute('type', 'password');
+function handleClick(event) {
+  const numberElement = event.target.dataset.pageNumber;
+  console.log(numberElement);
 }
+
+checkboxElem.forEach(elem => {
+  elem.addEventListener('click', handleClick);
+});
