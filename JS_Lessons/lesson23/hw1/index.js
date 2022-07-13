@@ -74,4 +74,4 @@ const changeStatus = event => {
   renderTasks(tasks);
 };
 
-listElem.addEventListener('change', changeStatus);
+listElem.addEventListener('click', changeStatus);
