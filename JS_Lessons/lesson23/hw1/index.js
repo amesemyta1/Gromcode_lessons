@@ -17,13 +17,16 @@ const renderTasks = tasksList => {
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
       const checkbox = document.createElement('input');
+
       checkbox.setAttribute('type', 'checkbox');
       checkbox.dataset.id = index;
       checkbox.checked = done;
+
       checkbox.classList.add('list__item-checkbox');
       if (done) {
         listItemElem.classList.add('list__item_done');
       }
+
       listItemElem.append(checkbox, text);
 
       return listItemElem;
@@ -60,7 +63,7 @@ createTaskBtnElem.addEventListener('click', createNewTask);
 // changeStatus
 
 const changeStatus = event => {
-  const idNum = +event.target.dataset.id;
+  const idNum = event.target.dataset.id;
   console.log(idNum);
   if (tasks[idNum].done) {
     tasks[idNum].done = false;
@@ -71,6 +74,4 @@ const changeStatus = event => {
   renderTasks(tasks);
 };
 
-const checkboxElem = document.querySelectorAll('.list__item-checkbox');
-
-checkboxElem.forEach(elem => elem.addEventListener('change', changeStatus));
+listElem.addEventListener('change', changeStatus);
