@@ -64,7 +64,7 @@ createTaskBtnElem.addEventListener('click', createNewTask);
 
 const changeStatus = event => {
   const idNum = event.target.dataset.id;
-  console.log(idNum);
+
   if (tasks[idNum].done) {
     tasks[idNum].done = false;
   } else {
