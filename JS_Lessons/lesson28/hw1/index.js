@@ -18,8 +18,8 @@ export const shmoment = value => {
           return this;
         }
         case 'months': {
-          const changemonth = month + number;
-          resultData.setMonth(changemonth);
+          const changeMonth = month + number;
+          resultData.setMonth(changeMonth);
           return this;
         }
         case 'days': {
@@ -28,23 +28,23 @@ export const shmoment = value => {
           return this;
         }
         case 'hours': {
-          const changemonth = Hours + number;
-          resultData.setHours(changemonth);
+          const changeHours = Hours + number;
+          resultData.setHours(changeHours);
           return this;
         }
         case 'minutes': {
-          const changemonth = Minutes + number;
-          resultData.setMinutes(changemonth);
+          const changeMinutes = Minutes + number;
+          resultData.setMinutes(changeMinutes);
           return this;
         }
         case 'seconds': {
-          const changemonth = Seconds + number;
-          resultData.setSeconds(changemonth);
+          const changeSeconds = Seconds + number;
+          resultData.setSeconds(changeSeconds);
           return this;
         }
         case 'milliseconds': {
-          const changemonth = Milliseconds + number;
-          resultData.setMilliseconds(changemonth);
+          const changeMilliseconds = Milliseconds + number;
+          resultData.setMilliseconds(changeMilliseconds);
           return this;
         }
         default:
@@ -69,23 +69,23 @@ export const shmoment = value => {
           return this;
         }
         case 'hours': {
-          const changemonth = Hours - number;
-          resultData.setHours(changemonth);
+          const changeHours = Hours - number;
+          resultData.setHours(changeHours);
           return this;
         }
         case 'minutes': {
-          const changemonth = Minutes - number;
-          resultData.setMinutes(changemonth);
+          const changeMinutes = Minutes - number;
+          resultData.setMinutes(changeMinutes);
           return this;
         }
         case 'seconds': {
-          const changemonth = Seconds - number;
-          resultData.setSeconds(changemonth);
+          const changeSeconds = Seconds - number;
+          resultData.setSeconds(changeSeconds);
           return this;
         }
         case 'milliseconds': {
-          const changemonth = Milliseconds - number;
-          resultData.setMilliseconds(changemonth);
+          const changeMilliseconds = Milliseconds - number;
+          resultData.setMilliseconds(changeMilliseconds);
           return this;
         }
         default:
