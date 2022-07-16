@@ -1,15 +1,64 @@
-export const getDiff = (startDate, endDate) => {
-  const diff = Math.abs(Math.floor(endDate.getTime() - startDate.getTime()));
-  console.log('start: ', startDate, '\nend: ', endDate);
-  const days = parseInt(diff / (1000 * 60 * 60 * 24), 10);
-  const hours = parseInt((diff / (1000 * 60 * 60)) % 24, 10);
-  const minutes = parseInt((diff / (1000 * 60)) % 60, 10);
-  const seconds = parseInt((diff / 1000) % 60, 10);
-  console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+const shmoment = value => {
+  const resultData = value;
+  const year = resultData.getFullYear();
+  const month = resultData.getMonth();
+  const Day = resultData.getDay();
+  const Hours = resultData.getHours();
+  const Minutes = resultData.getMinutes();
+  const Seconds = resultData.getSeconds();
+  const Milliseconds = resultData.getMilliseconds();
+  console.log(resultData);
 
-  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  const changeDate = {
+    add(type, number) {
+      switch (type) {
+        case 'years': {
+          const changeYear = year + number;
+          resultData.setFullYear(changeYear);
+          return this;
+        }
+        case 'months': {
+          const changemonth = month + number;
+          resultData.setMonth(changemonth);
+          return this;
+        }
+        case 'days': {
+          const changeYear = Day + number;
+          resultData.setDay(changeYear);
+          return this;
+        }
+        case 'hours': {
+          const changemonth = Hours + number;
+          resultData.setHours(changemonth);
+          return this;
+        }
+        case 'minutes': {
+          const changemonth = Minutes + number;
+          resultData.setMinutes(changemonth);
+          return this;
+        }
+        case 'seconds': {
+          const changemonth = Seconds + number;
+          resultData.setSeconds(changemonth);
+          return this;
+        }
+        case 'milliseconds': {
+          const changemonth = Milliseconds + number;
+          resultData.setMilliseconds(changemonth);
+          return this;
+        }
+        default:
+          return this;
+      }
+    },
+    result() {
+      return resultData;
+    },
+  };
+
+  return changeDate;
 };
 
-const test = getDiff(new Date(2022, 6, 1), new Date());
+const test = shmoment(new Date()).add('month', 3).add('years', 1).result();
 
-console.log(test);
+console.log('Function test: ', test);
