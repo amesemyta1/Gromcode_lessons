@@ -1,8 +1,8 @@
-export const shmoment = value => {
+const shmoment = value => {
   const resultData = new Date(value);
   const year = resultData.getFullYear();
   const month = resultData.getMonth();
-  const Day = resultData.getDay();
+  const Day = resultData.getDate();
   const Hours = resultData.getHours();
   const Minutes = resultData.getMinutes();
   const Seconds = resultData.getSeconds();
@@ -24,7 +24,7 @@ export const shmoment = value => {
         }
         case 'days': {
           const changeDays = Day + number;
-          resultData.setDay(changeDays);
+          resultData.setDate(changeDays);
           return this;
         }
         case 'hours': {
@@ -65,7 +65,7 @@ export const shmoment = value => {
         }
         case 'days': {
           const changeDays = Day - number;
-          resultData.setDay(changeDays);
+          resultData.setDate(changeDays);
           return this;
         }
         case 'hours': {
@@ -100,6 +100,6 @@ export const shmoment = value => {
   return changeDate;
 };
 
-const test = shmoment(new Date()).add('months', 3).add('years', 1).result();
+const test = shmoment(new Date()).add('days', 33).add('years', 1).result();
 
 console.log('Function test: ', test);
