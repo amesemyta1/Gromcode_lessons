@@ -23,8 +23,8 @@ export const shmoment = value => {
           return this;
         }
         case 'days': {
-          const changeYear = Day + number;
-          resultData.setDay(changeYear);
+          const changeDays = Day + number;
+          resultData.setDay(changeDays);
           return this;
         }
         case 'hours': {
@@ -64,8 +64,8 @@ export const shmoment = value => {
           return this;
         }
         case 'days': {
-          const changeYear = Day - number;
-          resultData.setDay(changeYear);
+          const changeDays = Day - number;
+          resultData.setDay(changeDays);
           return this;
         }
         case 'hours': {
