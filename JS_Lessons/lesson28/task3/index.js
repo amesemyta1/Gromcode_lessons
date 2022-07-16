@@ -1,6 +1,9 @@
 // const sum1 = (a, b) => a + b;
 
-export const mult = a => b => a * b;
+export const mult =
+  a =>
+  (b = a) =>
+    a * b;
 
 export const twice = a => mult(a);
 
