@@ -1,4 +1,4 @@
-const shmoment = value => {
+export const shmoment = value => {
   const resultData = value;
   const year = resultData.getFullYear();
   const month = resultData.getMonth();
@@ -51,6 +51,47 @@ const shmoment = value => {
           return this;
       }
     },
+    subtract(type, number) {
+      switch (type) {
+        case 'years': {
+          const changeYear = year - number;
+          resultData.setFullYear(changeYear);
+          return this;
+        }
+        case 'months': {
+          const changemonth = month - number;
+          resultData.setMonth(changemonth);
+          return this;
+        }
+        case 'days': {
+          const changeYear = Day - number;
+          resultData.setDay(changeYear);
+          return this;
+        }
+        case 'hours': {
+          const changemonth = Hours - number;
+          resultData.setHours(changemonth);
+          return this;
+        }
+        case 'minutes': {
+          const changemonth = Minutes - number;
+          resultData.setMinutes(changemonth);
+          return this;
+        }
+        case 'seconds': {
+          const changemonth = Seconds - number;
+          resultData.setSeconds(changemonth);
+          return this;
+        }
+        case 'milliseconds': {
+          const changemonth = Milliseconds - number;
+          resultData.setMilliseconds(changemonth);
+          return this;
+        }
+        default:
+          return this;
+      }
+    },
     result() {
       return resultData;
     },
@@ -59,6 +100,6 @@ const shmoment = value => {
   return changeDate;
 };
 
-const test = shmoment(new Date()).add('month', 3).add('years', 1).result();
+const test = shmoment(new Date()).add('months', 3).add('years', 1).result();
 
 console.log('Function test: ', test);
