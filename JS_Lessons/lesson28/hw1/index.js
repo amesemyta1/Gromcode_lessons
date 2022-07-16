@@ -1,4 +1,4 @@
-const shmoment = value => {
+export const shmoment = value => {
   const resultData = new Date(value);
   const year = resultData.getFullYear();
   const month = resultData.getMonth();
