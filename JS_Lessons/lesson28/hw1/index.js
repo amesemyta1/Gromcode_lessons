@@ -1,5 +1,5 @@
 export const shmoment = value => {
-  const resultData = value;
+  const resultData = new Date(value);
   const year = resultData.getFullYear();
   const month = resultData.getMonth();
   const Day = resultData.getDay();
