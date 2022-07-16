@@ -2,8 +2,8 @@
 
 export const mult = a => b => a * b;
 
-export const twice = mult(7);
+export const twice = a => a => a * a;
 
-export const triple = twice(9);
+export const triple = a => a => a => a * a * a;
 
 // const test = mult(5)(4);
