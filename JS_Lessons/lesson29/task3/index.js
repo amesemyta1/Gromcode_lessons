@@ -1,27 +1,24 @@
-// const sum1 = (a, b) => a + b;
+/**
+ * @return {undefined}
+ */
+export const printing = () => {
+  console.log(1);
 
-// const mult = a => b => a * b;
+  setTimeout(function () {
+    console.log(5);
+  }, 1000);
 
-// const twice = a => mult(a) + a;
+  console.log(2);
 
-// const triple = a => mult(a) * a;
+  setTimeout(function () {
+    console.log(4);
+  }, 0);
 
-export function mult(a) {
-  return b => {
-    return a * b;
-  };
-}
+  setTimeout(function () {
+    console.log(6);
+  }, 2000);
 
-export function twice(a) {
-  return mult(a)(2);
-}
+  console.log(3);
+};
 
-export function triple(a) {
-  return mult(a)(3);
-}
-
-console.log(mult(5)(4));
-
-console.log(twice(7));
-
-console.log(triple(9));
+printing();
