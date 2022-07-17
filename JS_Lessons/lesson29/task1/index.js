@@ -12,13 +12,13 @@ export const addImage = (imgSrc, callback) => {
     callback(null, { width, height });
   };
 
-  imgElem.addEventListener('load', onImageLoaded());
+  imgElem.addEventListener('load', onImageLoaded);
 
   imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
 // callback function
-const onImageLoaded = (error, imgElem) => {
+export const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
