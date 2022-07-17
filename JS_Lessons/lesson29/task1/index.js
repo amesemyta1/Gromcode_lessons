@@ -18,7 +18,7 @@ export const addImage = (imgSrc, callback) => {
 };
 
 // callback function
-export const onImageLoaded = (error, imgElem) => {
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
