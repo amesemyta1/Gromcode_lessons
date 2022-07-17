@@ -12,7 +12,7 @@ export const addImage = (imgSrc, callback) => {
     callback(null, { width, height });
   };
 
-  imgElem.addEventListener('load', onImageLoaded);
+  imgElem.addEventListener('load', onImageLoaded());
 
   imgElem.addEventListener('error', () => callback('Image load failed'));
 };
@@ -31,7 +31,4 @@ const onImageLoaded = (error, imgElem) => {
 };
 
 // examples
-// addImage(
-//   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
-//   onImageLoaded,
-// );
+addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
