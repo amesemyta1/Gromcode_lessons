@@ -7,19 +7,18 @@ export const addImage = (imgSrc, callback) => {
   const containerElem = document.querySelector('.page');
   containerElem.append(imgElem);
 
-  const { width, height } = imgElem;
-  //   const onImageLoaded = () => {
-  //     const { width, height } = imgElem;
-  //     callback(null, { width, height });
-  //   };
+  const onImageLoad = () => {
+    const { width, height } = imgElem;
+    callback(null, { width, height });
+  };
 
-  imgElem.addEventListener('load', callback(null, { width, height }));
+  imgElem.addEventListener('load', onImageLoad);
 
   imgElem.addEventListener('error', () => callback('Image load is failed'));
 };
 
 // callback function
-export const onImageLoaded = (error, imgElem) => {
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
