@@ -8,8 +8,7 @@ export const addImage = (imgSrc, callback) => {
   containerElem.append(imgElem);
 
   const onImageLoad = () => {
-    const { width, height } = imgElem;
-    callback(null, { width, height });
+    callback(null, imgElem);
   };
 
   imgElem.addEventListener('load', onImageLoad);
@@ -31,4 +30,4 @@ const onImageLoaded = (error, imgElem) => {
 };
 
 // examples
-// addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
+addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
