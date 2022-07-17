@@ -14,7 +14,7 @@ export const addImage = (imgSrc, callback) => {
 
   imgElem.addEventListener('load', onImageLoaded);
 
-  imgElem.addEventListener('error', () => callback('Image load failed'));
+  imgElem.addEventListener('error', () => callback('Image load is failed'));
 };
 
 // callback function
@@ -31,4 +31,4 @@ export const onImageLoaded = (error, imgElem) => {
 };
 
 // examples
-addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
+// addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
