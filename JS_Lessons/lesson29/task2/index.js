@@ -1,37 +1,21 @@
-export const markFavorites = (tree, favorites) => {
-  const isFavorite = favorites.includes(tree.id);
-
-  return {
-    ...tree,
-    isFavorite,
-    nodes: tree.nodes.map(childNode => markFavorites(childNode, favorites)),
-  };
+/**
+ * @param {number} count
+ * @param {number} period
+ * @return {undefined}
+ */
+export const pinger = (count, period) => {
+  let i = count;
+  console.log('Ping');
+  const interval = setInterval(() => {
+    // eslint-disable-next-line no-plusplus
+    if (--i > 0) {
+      console.log('Ping');
+    } else {
+      clearInterval(interval);
+    }
+  }, period);
 };
 
-// const favorites = ['id-2'];
-// const tree = {
-//     id: 'id-1',
-//     name: 'Products',
-//     nodes: [
-//         {
-//             id: 'id-2',
-//             name: 'Food',
-//             nodes: []
-//         },
-//     ],
-// };
-
-// const result = markFavorites(tree, favorites);
-// result; // {
-//     id: 'id-1',
-//     name: 'Products',
-//     isFavorite: false,
-//     nodes: [
-//         {
-//             id: 'id-2',
-//             isFavorite: true,
-//             name: 'Food',
-//             nodes: []
-//         },
-//     ],
-// };
+// examples
+pinger(5, 100); // makes 5 writes with 100 ms interval
+pinger(7, 150); // makes 7 writes with 1500 ms interval

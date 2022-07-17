@@ -31,4 +31,4 @@ export const onImageLoaded = (error, imgElem) => {
 };
 
 // examples
-// addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
+addImage('https://proza.ru/pics/2019/02/05/56.jpg', onImageLoaded);
