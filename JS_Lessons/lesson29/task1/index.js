@@ -35,4 +35,9 @@ export const addImage = imgSrc => {
 // };
 
 // examples
-addImage('https://proza.ru/pics/2019/02/05/56.jpg');
+
+// const imgSrc = 'https://proza.ru/pics/2019/02/05/56.jpg';
+
+// const result = addImage(imgSrc);
+
+// console.log(result);
