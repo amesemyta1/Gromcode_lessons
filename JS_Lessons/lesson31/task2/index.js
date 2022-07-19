@@ -24,8 +24,3 @@ export const asyncCalculator = num =>
       console.log(`Doubled value: ${result}`);
       return result;
     });
-
-// requestUserData({ userId: 47 })
-//   .then(data => console.log(data))
-//   .catch(error => console.log(error))
-//   .finally(() => console.log('finally'));
