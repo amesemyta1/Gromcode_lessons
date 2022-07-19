@@ -1,16 +1,9 @@
-/*
- * failedPromise должен зареджектить ошибку new Error('Oops, error!');
- * Ответьте себе на вопрос, какой тип данных имеет переменная failedPromise
- */
+export const delay = time =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
 
-const failedPromise = new Promise((resolve, reject) => {
-  reject(new Error('Oops, error!'));
-});
-
-/*
- * выведите в консоль ошибку в ф-ции onError
- */
-
-failedPromise.catch(function onError(error) {
-  console.log(error);
-});
+// delay(3000).then(() => console.log('Done'));
+// строка 'Done' должна появиться в консоли через 3 секунды

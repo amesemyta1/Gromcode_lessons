@@ -1,28 +1,28 @@
-/* ===> 1 <=== */
-
-/*
- * successPromise должен зарезолвить число 67
- * Ответьте себе на вопрос, какой тип данных имеет переменная successPromise
- */
-
-const successPromise = new Promise(resolve => {
-  resolve(67);
+const serverResponsePromise = new Promise(resolve => {
+  const serverResponse = {
+    ok: true,
+    json() {
+      return Promise.resolve({
+        name: 'John',
+        age: 20,
+      });
+    },
+  };
+  resolve(serverResponse);
 });
 
 /*
- * допишите обработчик успешного промиса (аргументы и тело ф-ции onSuccess)
- * чтобы в консоль вывелся квадрат числа, которое резолвиться из successPromise
+ * допиши первый обработчик, чтобы во второй попал объект пользователя
  */
 
-successPromise.then(function onSuccess(number) {
-  console.log(number * number);
-});
+serverResponsePromise
+  .then(response => {
+    return response.json();
+  })
+  .then(result => {
+    console.log(result); // { name: 'John', age: 20 }
+  });
 
-/*
- * в обработчике ошибок промиса (ф-ция onError внутри .catch()) выведите в консоль текст 'I am an error'
- * текст вывелся в консоль?
- * подумайте почему
- */
-successPromise.catch(function onError() {
-  console.log('I am an error');
-});
+console.log(
+  '!!! Обрати внимание, что этот текст вывелся самым первым. Ведь это синхронный код, а промисы - асинхронны !!!',
+);
