@@ -1,28 +1,23 @@
-const serverResponsePromise = new Promise(resolve => {
-  const serverResponse = {
-    ok: true,
-    json() {
-      return Promise.resolve({
-        name: 'John',
-        age: 20,
-      });
-    },
-  };
-  resolve(serverResponse);
-});
-
+const promiseNumber1 = Promise.resolve(67);
+const promiseNumber2 = Promise.resolve(23);
+const promiseNumber3 = Promise.resolve(8);
 /*
- * допиши первый обработчик, чтобы во второй попал объект пользователя
+ * создай промис и присвой переменной resultPromise
+ * чтобы в консоль вывелась сумма всех чисел из трех промисов
  */
 
-serverResponsePromise
-  .then(response => {
-    return response.json();
+// update code below
+
+const resultPromise = new Promise(resolve => {
+  resolve(Promise.all([promiseNumber1, promiseNumber2, promiseNumber3]));
+});
+
+resultPromise
+  .then(numbersList => {
+    console.log(numbersList);
+    const sum = numbersList.reduce((acc, num) => acc + num, 0);
+    return sum;
   })
   .then(result => {
-    console.log(result); // { name: 'John', age: 20 }
+    console.log(result); // 98
   });
-
-console.log(
-  '!!! Обрати внимание, что этот текст вывелся самым первым. Ведь это синхронный код, а промисы - асинхронны !!!',
-);
