@@ -1,6 +1,6 @@
 const baseUrl = 'https://62dacf26e56f6d82a76a312f.mockapi.io/api/v1/users';
 
-const formElem = document.querySelectorAll('.login-form');
+const formElem = document.querySelector('.login-form');
 const buttonElem = document.querySelector('.submit-button');
 const formInputElem = document.querySelectorAll('.form-input');
 const [email, nameElem, password] = formInputElem;
@@ -8,8 +8,8 @@ const [email, nameElem, password] = formInputElem;
 // input form
 
 const checkedInputValue = e => {
-  const textValue = e.target.value;
-  if (textValue !== '') {
+  //   const textValue = e.target.value;
+  if (email.reportValidity() && nameElem.reportValidity() && password.reportValidity()) {
     buttonElem.removeAttribute('disabled', '');
   }
 };
@@ -27,17 +27,25 @@ const postFormData = formData => {
       'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(formData),
+  }).then(response => response.json());
+};
+
+const onSubmit = e => {
+  e.preventDefault();
+  const { name, email, password } = Object.fromEntries(new FormData(formElem));
+  const newUserData = {
+    name,
+    email,
+    password,
+  };
+  console.log(newUserData);
+  postFormData(newUserData).then(userData => {
+    alert(JSON.stringify(userData));
+    formElem.reset();
   });
 };
 
-const onFormSubmit = () => {
-  const formData = Object.fromEntries(new FormData(formElem));
-  console.log(formData);
-  postFormData(formData);
-  //   formElem.reset();
-};
-
-buttonElem.addEventListener('submit', onFormSubmit);
+formElem.addEventListener('submit', onSubmit);
 
 // algo
 // 1. get data from input fields
