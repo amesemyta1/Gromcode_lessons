@@ -8,7 +8,6 @@ const [email, nameElem, password] = formInputElem;
 // input form
 
 const checkedInputValue = e => {
-  //   const textValue = e.target.value;
   if (email.reportValidity() && nameElem.reportValidity() && password.reportValidity()) {
     buttonElem.removeAttribute('disabled', '');
   }
