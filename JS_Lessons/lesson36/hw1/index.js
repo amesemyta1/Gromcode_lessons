@@ -1,70 +1,30 @@
-const baseUrl = 'https://62dacf26e56f6d82a76a312f.mockapi.io/api/v1/users';
+/**
+ * @param {string[]} users
+ * @return {promise}
+ */
 
-export function getUsersList() {
-  return fetch(baseUrl).then(response => response.json());
-}
+const getUsersBlogs = users => {
+  try {
+    const promises = users.map(async el => {
+      const response = await fetch(`https://api.github.com/users/${el}`);
+      if (!response.ok) return null;
 
-export function getUserById(userId) {
-  return fetch(`${baseUrl}/${userId}`).then(response => response.json());
-}
+      return response.json().then(user => user.blog);
+    });
 
-export function createUser(userData) {
-  return fetch(baseUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-    body: JSON.stringify(userData),
-  });
-}
-
-export function deleteUser(userId) {
-  return fetch(`${baseUrl}/${userId}`, {
-    method: 'DELETE',
-  });
-}
-
-export function updateUser(userId, userData) {
-  return fetch(`${baseUrl}/${userId}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-    body: JSON.stringify(userData),
-  });
-}
+    return Promise.all(promises);
+  } catch (err) {
+    throw new Error('error: ', err);
+  }
+};
 
 // examples
-// getUsersList().then(users => {
-//   console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
-// });
+// getUsersBlogs(['google', 'facebook', 'reactjs']).then(linksList => console.log(linksList)); // ==> ["https://opensource.google/", "https://opensource.fb.com", "https://reactjs.org"]
+// getUsersBlogs(['microsoft']).then(linksList => console.log(linksList)); // ==> ["https://opensource.microsoft.com"]
 
-// getUserById('2').then(userData => {
-//   console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
-// });
-
-// const newUserData = {
-//   email: 'cool@email.com',
-//   firstName: 'Iron',
-//   lastName: 'Man',
-//   age: 42,
-// };
-
-// createUser(newUserData).then(() => {
-//   console.log('User created');
-// });
-
-// const updatedUserData = {
-//   email: 'new@email.com',
-//   firstName: 'John',
-//   lastName: 'Doe',
-//   age: 17,
-// };
-
-// updateUser('1', updatedUserData).then(() => {
-//   console.log('User updated');
-// });
-
-// deleteUser('2').then(() => {
-//   console.log('User updated');
-// });
+// algo
+// 1. get users data
+// 2. use 'map' on users massiv
+// 3. map 'el' = 'userName'
+// 4. use 'el' to get 'userData'
+// 5. use 'userData' to get 'userBlog'
