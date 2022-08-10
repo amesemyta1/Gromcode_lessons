@@ -1,32 +1,29 @@
 const tasks = [
-  { text: 'Buy milk', done: false },
-  { text: 'Pick up Tom from airport', done: false },
-  { text: 'Visit party', done: false },
-  { text: 'Visit doctor', done: true },
-  { text: 'Buy meat', done: true },
+  { id: '1', text: 'Buy milk', done: false },
+  { id: '2', text: 'Pick up Tom from airport', done: false },
+  { id: '3', text: 'Visit party', done: false },
+  { id: '4', text: 'Visit doctor', done: true },
+  { id: '5', text: 'Buy meat', done: true },
 ];
 
 const listElem = document.querySelector('.list');
 
-// renderTasks
-
 const renderTasks = tasksList => {
+  listElem.innerHTML = '';
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
-    .map(({ text, done }, index) => {
+    .map(({ id, text, done }) => {
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
       const checkbox = document.createElement('input');
-
       checkbox.setAttribute('type', 'checkbox');
-      checkbox.dataset.id = index;
+      checkbox.setAttribute('checked', done);
       checkbox.checked = done;
-
+      checkbox.dataset.id = id;
       checkbox.classList.add('list__item-checkbox');
       if (done) {
         listItemElem.classList.add('list__item_done');
       }
-
       listItemElem.append(checkbox, text);
 
       return listItemElem;
@@ -40,38 +37,38 @@ renderTasks(tasks);
 // createNewTask
 
 const createNewTask = () => {
-  const taskInputField = document.querySelector('.task-input');
-  const inputFieldValue = taskInputField.value;
-  if (inputFieldValue === '') {
+  const inputElem = document.querySelector('.task-input');
+  const inputValue = inputElem.value;
+
+  if (inputValue === '') {
     return;
   }
-  const newTask = {
-    text: inputFieldValue,
+
+  tasks.push({
+    id: `${tasks.length + 1}`,
+    text: inputValue,
     done: false,
-  };
-  tasks.push(newTask);
-  taskInputField.value = '';
-  taskInputField.innerHTML = '';
-  listElem.innerHTML = '';
+  });
+
+  inputElem.value = '';
   renderTasks(tasks);
 };
 
-const createTaskBtnElem = document.querySelector('.create-task-btn');
+const createBtn = document.querySelector('.create-task-btn');
+createBtn.addEventListener('click', createNewTask);
 
-createTaskBtnElem.addEventListener('click', createNewTask);
+// onToggleTask
 
-// changeStatus
+const onToggleTask = e => {
+  const isCheckBox = e.target.classList.contains('list__item-checkbox');
 
-const changeStatus = event => {
-  const idNum = event.target.dataset.id;
-
-  if (tasks[idNum].done) {
-    tasks[idNum].done = false;
-  } else {
-    tasks[idNum].done = true;
+  if (!isCheckBox) {
+    return;
   }
-  listElem.innerHTML = '';
+
+  const taskData = tasks.find(task => task.id === e.target.dataset.id);
+  Object.assign(taskData, { done: e.target.checked });
   renderTasks(tasks);
 };
 
-listElem.addEventListener('click', changeStatus);
+listElem.addEventListener('click', onToggleTask);
